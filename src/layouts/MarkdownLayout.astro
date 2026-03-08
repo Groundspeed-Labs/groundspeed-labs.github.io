@@ -1,0 +1,15 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <article class="prose">
+    <h1>{frontmatter.title}</h1>
+    {frontmatter.lastUpdated && (
+      <p class="meta">Last updated: {frontmatter.lastUpdated}</p>
+    )}
+    <slot />
+  </article>
+</BaseLayout>
