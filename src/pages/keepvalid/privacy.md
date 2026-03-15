@@ -2,12 +2,12 @@
 layout: ../../layouts/MarkdownLayout.astro
 title: KeepValid — Privacy Policy
 description: Privacy policy for the KeepValid app.
-lastUpdated: March 8, 2026
+lastUpdated: March 15, 2026
 ---
 
-**Effective date:** March 8, 2026
+**Effective date:** March 15, 2026
 
-Groundspeed Labs ("we", "us") built KeepValid as a document expiration reminder app. This page explains what data we collect, how we use it, and your rights.
+Cloudsec SRL ("we", "us"), a company registered in Romania, built KeepValid as a document expiration reminder app. This page explains what data we collect, how we use it, and your rights.
 
 ## What We Collect
 
@@ -32,6 +32,14 @@ Your data is used exclusively to:
 
 We do not sell, share, or use your data for advertising or profiling.
 
+## Legal Basis for Processing
+
+Under GDPR, we process your data based on:
+
+- **Contract performance** — processing your email, document metadata, and notification preferences is necessary to provide the KeepValid service you signed up for.
+- **Legitimate interest** — crash and error reporting (via Sentry) to maintain service reliability and fix issues.
+- **Consent** — you may withdraw consent at any time by deleting your account.
+
 ## Third-Party Services
 
 We use the following third-party services:
@@ -39,12 +47,14 @@ We use the following third-party services:
 - **Supabase** — hosts our database and handles authentication. Your email and document metadata are stored in Supabase. [Supabase Privacy Policy](https://supabase.com/privacy)
 - **Firebase Cloud Messaging (FCM)** — delivers push notifications to your device. Only your device token is sent to Firebase. [Google Privacy Policy](https://policies.google.com/privacy)
 - **Google ML Kit** — performs on-device text recognition for document scanning. ML Kit runs entirely on your device; no data is sent to Google. [ML Kit Terms](https://developers.google.com/ml-kit/terms)
+- **Sentry** — collects crash reports and error diagnostics to help us fix bugs. Sentry may receive device type, OS version, and stack traces. No document data or personal information is included. [Sentry Privacy Policy](https://sentry.io/privacy/)
 
 ## Data Storage and Security
 
 - Your data is stored on servers in the European Union.
 - All communication between the app and our servers is encrypted with TLS (HTTPS).
 - Passwords are hashed and never stored in plain text.
+- We maintain data processing agreements (DPAs) with our third-party processors (Supabase, Sentry) to ensure your data is handled in compliance with GDPR.
 
 ## Data Retention
 
@@ -59,8 +69,13 @@ Under GDPR and applicable privacy laws, you have the right to:
 - **Access** your personal data
 - **Correct** inaccurate data
 - **Delete** your account and all associated data
-- **Export** your data (contact us and we will provide it)
+- **Data portability** — export your data in a machine-readable format (contact us)
+- **Restrict processing** — request that we limit how we use your data
+- **Object** to processing based on legitimate interest
 - **Withdraw consent** at any time by deleting your account
+- **Lodge a complaint** with a supervisory authority — for Romania, this is ANSPDCP (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal) at [dataprotection.ro](https://www.dataprotection.ro)
+
+To exercise any of these rights, contact us at the email below.
 
 ## Children's Privacy
 
@@ -74,4 +89,5 @@ We may update this policy from time to time. Changes will be posted on this page
 
 If you have questions about this privacy policy or your data, contact us at:
 
+**Cloudsec SRL**
 **Email:** privacy@groundspeedlabs.com
