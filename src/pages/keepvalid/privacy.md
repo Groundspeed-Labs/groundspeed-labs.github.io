@@ -2,10 +2,10 @@
 layout: ../../layouts/MarkdownLayout.astro
 title: KeepValid — Privacy Policy
 description: Privacy policy for the KeepValid app.
-lastUpdated: March 15, 2026
+lastUpdated: March 19, 2026
 ---
 
-**Effective date:** March 15, 2026
+**Effective date:** March 19, 2026
 
 Cloudsec SRL ("we", "us"), a company registered in Romania, built KeepValid as a document expiration reminder app. This page explains what data we collect, how we use it, and your rights.
 
@@ -14,7 +14,7 @@ Cloudsec SRL ("we", "us"), a company registered in Romania, built KeepValid as a
 - **Email address** — used for your account and to send expiration reminders by email.
 - **Document metadata** — document type (e.g., "passport"), name you assign, and expiration date. We do not store document numbers, personal names, or any other identifying information from your documents.
 - **Notification preferences** — your chosen reminder intervals and notification channels.
-- **Device token** — a Firebase Cloud Messaging token used to deliver push notifications to your device.
+- **Device token** — a unique Firebase Cloud Messaging device identifier used to deliver push notifications to your device.
 
 ## What We Do Not Collect
 
@@ -47,14 +47,15 @@ We use the following third-party services:
 - **Supabase** — hosts our database and handles authentication. Your email and document metadata are stored in Supabase. [Supabase Privacy Policy](https://supabase.com/privacy)
 - **Firebase Cloud Messaging (FCM)** — delivers push notifications to your device. Only your device token is sent to Firebase. [Google Privacy Policy](https://policies.google.com/privacy)
 - **Google ML Kit** — performs on-device text recognition for document scanning. ML Kit runs entirely on your device; no data is sent to Google. [ML Kit Terms](https://developers.google.com/ml-kit/terms)
-- **Sentry** — collects crash reports and error diagnostics to help us fix bugs. Sentry may receive device type, OS version, and stack traces. No document data or personal information is included. [Sentry Privacy Policy](https://sentry.io/privacy/)
+- **Resend** — delivers email notifications. Only your email address and notification content are sent to Resend. [Resend Privacy Policy](https://resend.com/legal/privacy-policy)
+- **Sentry** — collects crash reports and error diagnostics to help us fix bugs. Sentry may receive device type, OS version, and stack traces. No document data or personal information is included. Sentry processes data in the United States under the EU-US Data Privacy Framework. [Sentry Privacy Policy](https://sentry.io/privacy/)
 
 ## Data Storage and Security
 
-- Your data is stored on servers in the European Union.
+- Your data is stored on servers in the European Union. Crash and diagnostic data is processed by Sentry in the United States under the EU-US Data Privacy Framework.
 - All communication between the app and our servers is encrypted with TLS (HTTPS).
 - Passwords are hashed and never stored in plain text.
-- We maintain data processing agreements (DPAs) with our third-party processors (Supabase, Sentry) to ensure your data is handled in compliance with GDPR.
+- We maintain data processing agreements (DPAs) with our third-party processors (Supabase, Sentry, Resend) to ensure your data is handled in compliance with GDPR.
 
 ## Data Retention
 
