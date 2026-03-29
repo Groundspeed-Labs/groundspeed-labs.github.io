@@ -37,7 +37,6 @@ When you delete your account, the following data is permanently removed from our
 
 If you are unable to access the app or need assistance deleting your account, contact us at:
 
-**Cloudsec SRL**
 **Email:** privacy@groundspeedlabs.com
 
 We will process your request within 30 days in accordance with GDPR.

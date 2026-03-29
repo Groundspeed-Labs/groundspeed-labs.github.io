@@ -4,9 +4,14 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  contentMode?: 'standard' | 'wide';
 }
 
-const { title, description = 'Groundspeed Labs — practical tools, no nonsense.' } = Astro.props;
+const {
+  title,
+  description = 'Groundspeed Labs — practical tools, no nonsense.',
+  contentMode = 'standard',
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -22,11 +27,17 @@ const { title, description = 'Groundspeed Labs — practical tools, no nonsense.
     <header class="site-header">
       <nav>
         <a href="/" class="logo">Groundspeed Labs</a>
+        <div class="nav-actions">
+          <a href="/keepvalid/" class="nav-link">KeepValid</a>
+          <a href="/keepvalid/#updates" class="header-cta">Get Updates</a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <slot />
+      <div class:list={['page-shell', contentMode === 'wide' && 'page-shell-wide']}>
+        <slot />
+      </div>
     </main>
 
     <footer class="site-footer">

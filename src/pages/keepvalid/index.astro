@@ -1,31 +1,252 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const waitlistAction =
+  'mailto:contact@groundspeedlabs.com?subject=KeepValid%20updates';
+
+const steps = [
+  {
+    image: '/images/keepvalid/screenshot1.png',
+    alt: 'KeepValid home screen with options to scan a document or add one manually.',
+    title: 'Add or scan a document',
+    description:
+      'Capture expiry dates from your phone camera or enter them manually when you need to move fast.',
+  },
+  {
+    image: '/images/keepvalid/screenshot3.png',
+    alt: 'KeepValid document detail screen showing a medical certificate expiring in two days.',
+    title: 'See what needs attention',
+    description:
+      'Track the important date, status, notes, and renewal timeline before paperwork becomes a problem.',
+  },
+  {
+    image: '/images/keepvalid/screenshot5.png',
+    alt: 'KeepValid notification settings screen with push and email reminder intervals.',
+    title: 'Get reminded your way',
+    description:
+      'Use push, email, or both, with reminder intervals set days or months before expiry.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What document types does it support?',
+    answer:
+      'The first release is built for pilot paperwork and common personal documents: medical certificates, ratings, licenses, passports, IDs, and cards.',
+  },
+  {
+    question: 'How are reminders sent?',
+    answer:
+      'KeepValid supports push notifications, email reminders, or both, with lead times that range from days to months in advance.',
+  },
+  {
+    question: 'Are my document photos stored or uploaded anywhere?',
+    answer:
+      'No. OCR runs on your device and document photos are not uploaded to our servers.',
+  },
+  {
+    question: 'How can I add documents?',
+    answer:
+      'You can scan with your camera or add document details manually, whichever is faster or more convenient.',
+  },
+  {
+    question: 'Is it free?',
+    answer:
+      'KeepValid starts with a free tier for up to 5 tracked documents. Premium pricing for larger document sets will be announced later.',
+  },
+  {
+    question: 'How do I delete my account and data?',
+    answer:
+      'You can delete your account from inside the app at any time, which permanently removes your documents and reminder settings.',
+    link: '/keepvalid/delete-account/',
+    linkLabel: 'Read the full deletion steps.',
+  },
+];
 ---
 
 <BaseLayout
-  title="KeepValid — Never let a document expire"
-  description="KeepValid tracks your document expiration dates and reminds you before they expire. Scan, forget, get notified."
+  title="KeepValid — Document expiry reminders for pilots and busy people"
+  description="KeepValid helps pilots and other busy people track expiring documents and get reminded before they lapse."
+  contentMode="wide"
 >
-  <h1>KeepValid</h1>
-  <p class="tagline">Never let a document expire.</p>
+  <section class="product-hero">
+    <div class="product-copy">
+      <p class="eyebrow">Coming soon</p>
+      <h1>Don't get grounded by an expired document.</h1>
+      <p class="tagline">
+        Built for pilots. Useful for anyone tracking multiple expiring
+        documents.
+      </p>
 
-  <p>
-    KeepValid watches your documents so you don't have to. Point your camera at
-    an ID, passport, driver's license, or credit card — it reads the expiry date
-    automatically and reminds you before it's too late.
-  </p>
+      <p class="hero-summary">
+        Track medical certificates, ratings, licenses, passports, IDs, and
+        cards from your phone. KeepValid helps you catch deadlines before they
+        cost you a flight, a trip, or a last-minute scramble.
+      </p>
 
-  <ul class="features">
-    <li>Scan documents with your camera — expiry dates detected automatically</li>
-    <li>Get notified by push or email, days or months in advance</li>
-    <li>All processing happens on your device — your documents never leave your phone</li>
-    <li>Works with IDs, passports, licenses, cards, and more</li>
-  </ul>
+      <ul class="features product-features">
+        <li>Scan with your camera or add documents manually</li>
+        <li>Track what expires this year before it costs you time or money</li>
+        <li>Get reminded by push or email, days or months in advance</li>
+      </ul>
 
-  <!-- TODO: Replace with actual Play Store URL once published -->
-  <span class="cta" style="opacity: 0.6; cursor: default;">Coming soon on Google Play</span>
+      <section class="launch-panel" id="updates" aria-labelledby="launch-heading">
+        <p class="panel-label">Coming soon to Google Play</p>
+        <h2 id="launch-heading">Get notified when it's available.</h2>
+        <p class="panel-copy">
+          Leave your email and KeepValid will be in your inbox when the app is
+          ready.
+        </p>
+        <form
+          class="waitlist-form"
+          action={waitlistAction}
+          method="post"
+          enctype="text/plain"
+        >
+          <label class="sr-only" for="launch-email">Email address</label>
+          <input
+            id="launch-email"
+            name="email"
+            type="email"
+            placeholder="you@company.com"
+            autocomplete="email"
+            required
+          />
+          <button type="submit" class="cta">Get updates</button>
+        </form>
+        <p class="waitlist-note">
+          No ads. No tracking. A simple update email. This currently opens your
+          email app until the signup backend is wired.
+        </p>
+        <p class="utility-links">
+          <a href="/keepvalid/privacy/">Privacy Policy</a>
+        </p>
+      </section>
+    </div>
 
-  <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-muted);">
-    <a href="/keepvalid/privacy/">Privacy Policy</a>
-  </p>
+    <div class="product-visual">
+      <div class="shot-frame hero-shot">
+        <img
+          src="/images/keepvalid/screenshot2.png"
+          alt="KeepValid showing tracked documents including a medical certificate and SEP rating."
+          width="1280"
+          height="2856"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section" aria-labelledby="trust-heading">
+    <div class="trust-card">
+      <p class="section-label">Privacy first</p>
+      <h2 id="trust-heading">Your documents stay on your phone.</h2>
+      <p>
+        KeepValid processes document scans on-device. No document uploads. No
+        ads. No tracking.
+      </p>
+      <p class="trust-meta">
+        Built by Groundspeed Labs. Questions about the app or updates can go to
+        <a href="mailto:contact@groundspeedlabs.com">contact@groundspeedlabs.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <section class="audience-section" aria-labelledby="audience-heading">
+    <div class="section-heading">
+      <p class="section-label">Who it's for</p>
+      <h2 id="audience-heading">Pilot-first without becoming pilot-only.</h2>
+    </div>
+
+    <div class="audience-grid">
+      <article class="audience-card">
+        <p class="principle-index">01</p>
+        <h3>Pilots</h3>
+        <p>
+          Track medicals, ratings, licenses, and passports before an expiry
+          grounds you or interrupts work.
+        </p>
+      </article>
+
+      <article class="audience-card">
+        <p class="principle-index">02</p>
+        <h3>Everyone else</h3>
+        <p>
+          Keep personal IDs, driver's licenses, passports, cards, and other
+          recurring document deadlines in one place.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="steps-section" aria-labelledby="how-it-works">
+    <div class="section-heading">
+      <p class="section-label">How it works</p>
+      <h2 id="how-it-works">Scan it once. Keep the date. Get reminded.</h2>
+    </div>
+
+    <div class="steps-grid">
+      {
+        steps.map((step, index) => (
+          <article class="step-card">
+            <div class="shot-frame">
+              <img
+                src={step.image}
+                alt={step.alt}
+                width="1280"
+                height="2856"
+                loading="lazy"
+              />
+            </div>
+            <p class="principle-index">{String(index + 1).padStart(2, '0')}</p>
+            <h3>{step.title}</h3>
+            <p>{step.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div class="section-heading">
+      <p class="section-label">FAQ</p>
+      <h2 id="faq-heading">The questions that usually block signup.</h2>
+    </div>
+
+    <div class="faq-list">
+      {
+        faqs.map((item) => (
+          <article class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+            {item.link && <p><a href={item.link}>{item.linkLabel}</a></p>}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="bottom-cta-heading">
+    <p class="section-label">Stay updated</p>
+    <h2 id="bottom-cta-heading">Be first to know when KeepValid lands on Google Play.</h2>
+    <p>
+      Leave your email and we will send an update when KeepValid is available.
+    </p>
+    <form
+      class="waitlist-form waitlist-form-wide"
+      action={waitlistAction}
+      method="post"
+      enctype="text/plain"
+    >
+      <label class="sr-only" for="launch-email-bottom">Email address</label>
+      <input
+        id="launch-email-bottom"
+        name="email"
+        type="email"
+        placeholder="you@company.com"
+        autocomplete="email"
+        required
+      />
+      <button type="submit" class="cta">Notify me when it's live</button>
+    </form>
+  </section>
 </BaseLayout>

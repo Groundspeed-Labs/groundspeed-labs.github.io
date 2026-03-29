@@ -2,16 +2,88 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Groundspeed Labs">
-  <h1>Groundspeed Labs</h1>
-  <p class="tagline">Practical tools. No nonsense.</p>
+<BaseLayout
+  title="Groundspeed Labs"
+  description="Groundspeed Labs builds practical mobile tools. Current product: KeepValid, a document expiry reminder app."
+  contentMode="wide"
+>
+  <section class="home-hero">
+    <p class="eyebrow">Practical mobile tools</p>
 
-  <a href="/keepvalid/" class="app-card">
-    <h2>KeepValid <span class="arrow">&rarr;</span></h2>
-    <p>
-      Track your document expiration dates. Get reminded before your ID,
-      passport, license, or any other document expires. Scan it, forget it,
-      get notified.
-    </p>
-  </a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">Groundspeed Labs / mobile utilities / current product</p>
+        <h1>Keep important documents from expiring quietly.</h1>
+        <p class="tagline">
+          KeepValid helps people stay ahead of expiring documents without adding
+          more admin to their day.
+        </p>
+        <p class="hero-summary">
+          Track passports, licenses, IDs, cards, and other deadline-sensitive
+          documents from your phone. KeepValid is designed for anyone managing
+          multiple expirations and especially useful when missing one has real
+          consequences.
+        </p>
+      </div>
+
+      <aside class="hero-panel" aria-label="Current product">
+        <p class="panel-label">Current product</p>
+        <h2>KeepValid</h2>
+        <p class="panel-copy">
+          Track important documents before they turn into blocked renewals,
+          missed plans, or last-minute scrambles.
+        </p>
+
+        <ul class="signal-list">
+          <li>Scan or add a document in seconds</li>
+          <li>See what expires this year at a glance</li>
+          <li>Get reminded by push or email before it becomes a problem</li>
+        </ul>
+
+        <a href="/keepvalid/#updates" class="cta">Get updates</a>
+
+        <a href="/keepvalid/" class="app-card compact">
+          <span class="app-card-label">See product page</span>
+          <h3>KeepValid <span class="arrow">&rarr;</span></h3>
+          <p>Document expiry tracking for mobile.</p>
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="home-principles" aria-labelledby="how-we-build">
+    <div class="section-heading">
+      <p class="section-label">How we build</p>
+      <h2 id="how-we-build">Small scope. Clear utility. Mobile first.</h2>
+    </div>
+
+    <div class="principles-grid">
+      <article class="principle-card">
+        <p class="principle-index">01</p>
+        <h3>One clear job</h3>
+        <p>
+          Each app should solve a specific problem cleanly instead of turning
+          into a bundle of half-related features.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <p class="principle-index">02</p>
+        <h3>Useful on the device</h3>
+        <p>
+          Mobile is the product surface. We bias toward flows that are quick,
+          practical, and comfortable to use from the phone itself.
+        </p>
+      </article>
+
+      <article class="principle-card">
+        <p class="principle-index">03</p>
+        <h3>Less noise, more signal</h3>
+        <p>
+          The software should explain itself quickly, keep maintenance low, and
+          avoid the usual layer of unnecessary complexity.
+        </p>
+      </article>
+    </div>
+  </section>
 </BaseLayout>
