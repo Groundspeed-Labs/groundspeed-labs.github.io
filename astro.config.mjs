@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://groundspeed-labs.github.io',
+  site: 'https://groundspeedlabs.com',
   build: {
     format: 'directory',
   },
